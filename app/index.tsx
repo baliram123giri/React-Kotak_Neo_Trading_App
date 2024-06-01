@@ -13,7 +13,7 @@ const index = (props: Props) => {
         //redirect to the login page
         const redirectUrl = setTimeout(() => {
             router.navigate("/login")
-        }, 3000);
+        });
         return () => clearTimeout(redirectUrl)
     }, [])
 
