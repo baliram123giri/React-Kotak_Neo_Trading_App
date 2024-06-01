@@ -39,9 +39,16 @@ const _layout = (props: Props) => {
                 }}
             />
             <Stack.Screen
+                name="add-account"
+                options={{
+                    headerShown:false
+                }}
+            />
+            <Stack.Screen
                 name="link-sent"
                 options={{
-                    header: () => <GobckHandler />
+                    headerShown:false,
+                    
                 }}
             />
         </Stack>

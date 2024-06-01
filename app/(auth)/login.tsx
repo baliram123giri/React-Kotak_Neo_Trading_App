@@ -19,6 +19,9 @@ const Logo = (props: Props) => {
   function forgetRedirect() {
     navigate("/forget-pin")
   }
+  function AddAccount() {
+    navigate("/add-account")
+  }
 
   return (
     <View className='flex-1 justify-between bg-white' style={{ paddingHorizontal: HP(3.5), paddingBottom: HP(3.5) }}>
@@ -35,10 +38,12 @@ const Logo = (props: Props) => {
           <TouchableOpacity onPress={forgetRedirect}>
             <Text style={{ fontSize: HP(1.8) }} className='text-blue-900 font-medium'>Forget M-PIN?</Text>
           </TouchableOpacity>
-          <View className='flex-row items-center gap-1'>
-            <FontAwesome5 name="user-plus" size={HP(2.3)} color={darkBlue} />
-            <Text style={{ fontSize: HP(1.8) }} className='text-blue-900  font-medium'>Add Account</Text>
-          </View>
+          <TouchableOpacity onPress={AddAccount}>
+            <View className='flex-row items-center gap-1'>
+              <FontAwesome5 name="user-plus" size={HP(2.3)} color={darkBlue} />
+              <Text style={{ fontSize: HP(1.8) }} className='text-blue-900  font-medium'>Add Account</Text>
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
 
