@@ -1,5 +1,5 @@
 import { View, Text, TextInput, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { HP, WP } from '@/utils/helpers'
 import { FontAwesome5 } from '@expo/vector-icons';
 import { darkBlue, myColor } from '@/constants/Colors';
@@ -31,7 +31,11 @@ const Logo = (props: Props) => {
         </Text>
         {/* //from  */}
         <View className='border border-neutral-200 bg-white rounded-xl' style={{ height: HP(7.5), marginTop: HP(4) }}>
-          <TextInput keyboardType="number-pad" style={{ fontSize: HP(2) }} placeholder='Enter 6 digit M-PIN ' className='h-full placeholder:text-black   placeholder:font-semibold px-2 border-none outline-none' />
+          <TextInput secureTextEntry onChangeText={(value) => {
+            if (value.length === 6) {
+              navigate("/dashboard")
+            }
+          }} keyboardType="number-pad" style={{ fontSize: HP(2) }} placeholder='Enter 6 digit M-PIN ' className='h-full placeholder:text-black   placeholder:font-semibold px-2 border-none outline-none' />
         </View>
 
         <View style={{ marginTop: HP(1.8) }} className='flex-row justify-between'>

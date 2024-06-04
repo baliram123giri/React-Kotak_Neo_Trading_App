@@ -1,5 +1,4 @@
 import { View, Text, TextInput, TouchableOpacity } from 'react-native'
-import React from 'react'
 import { HP, WP } from '@/utils/helpers'
 import { darkBlue } from '@/constants/Colors'
 import { useRouter } from 'expo-router'
@@ -14,7 +13,9 @@ const LoginOtp = (props: Props) => {
     function loginPageRedirect() {
         navigate("/login")
     }
+    function inputHandler() {
 
+    }
     return (
         <View className='flex-1 bg-white justify-between' style={{ paddingHorizontal: HP(3.5), paddingBottom: HP(3.5) }}>
             <View>
