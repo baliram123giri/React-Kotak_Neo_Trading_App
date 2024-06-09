@@ -9,7 +9,7 @@ type Props = {
 
 const ViewLayout = ({ children }: Props) => {
     return (
-        <View style={{ paddingHorizontal: HP(3.5), paddingBottom: HP(3.5) }}>{children}</View>
+        <View style={{ paddingHorizontal: HP(2) }}>{children}</View>
     )
 }
 
